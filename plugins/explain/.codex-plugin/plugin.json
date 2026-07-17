@@ -1,0 +1,18 @@
+{
+  "name": "explain",
+  "version": "0.1.0",
+  "description": "Plain-language explanations sized for 10, 15, 20, or 30-second reads.",
+  "author": {
+    "name": "hicknughes"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Explain",
+    "shortDescription": "Short explanations anyone can understand",
+    "longDescription": "Explains a topic in language suitable for a typical 10-year-old, with selectable 10, 15, 20, and 30-second reading lengths.",
+    "developerName": "hicknughes",
+    "category": "Productivity",
+    "capabilities": ["Read"],
+    "defaultPrompt": "Explain this like I am 10 using the requested reading length."
+  }
+}

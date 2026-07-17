@@ -1,0 +1,55 @@
+# AGENTS.md
+
+## Engineering Workflow
+
+Use a lightweight workflow for small and medium, well-bounded, low-risk changes:
+
+1. Verify context and material assumptions through execution where practical.
+2. Make a brief plan.
+3. Implement narrowly and reuse existing responsibilities.
+4. Test.
+5. Review completeness, wiring, duplication, and regressions.
+6. Fix, re-test, and report evidence.
+
+Use the full workflow for large, ambiguous, risky, cross-cutting, architectural, authentication, schema, migration, production-data, or external-side-effect changes:
+
+1. Robust execution-first investigation
+2. Explicit plan
+3. Independent red-team of diagnosis and plan
+4. Plan revision
+5. Implementation
+6. Testing
+7. Independent implementation review
+8. Fixes and re-testing
+9. Evidence-based completion report
+
+Risk overrides change size. The user may explicitly request either workflow.
+
+## Quality Gates
+
+- Validate material assumptions before planning around them.
+- Search for existing owners of a responsibility before adding helpers or abstractions.
+- Trace implementation end to end; do not leave consumers, registrations, configuration, migrations, tests, or documentation unwired.
+- Execute relevant tests and probes rather than relying only on code reading.
+- Report actual verification and unresolved limitations.
+
+## Workflow Routing
+
+- Use the custom `deliver` skill as the default owner for end-to-end coding changes.
+- Use gstack's global `investigate` skill for systematic debugging of reported runtime failures.
+- Use gstack's global `plan-eng-review` as an additional full-workflow planning review when architecture or integration risk warrants it.
+- Use custom `review-implementation` for wiring, duplication, consumer, and completeness checks.
+- Use gstack's global `review` for additional pre-landing review of material or high-risk changes.
+- Use gstack's global `qa` for live web QA only with approval for its commit-producing workflow; use global `qa-only` for report-only QA.
+- Use gstack's global `ship` only when the user explicitly requests shipping, pushing, or pull-request creation.
+- Keep custom documentation and policy skills authoritative for their repository artifacts.
+
+## Repository Configuration
+
+### Verify Commands
+
+<!-- Add repository-specific test, lint, typecheck, build, and formatting commands. -->
+
+### Sensitive or Billable Actions
+
+<!-- List paid APIs, external writes, destructive operations, and sensitive data surfaces that require approval. -->

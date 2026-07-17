@@ -1,0 +1,4 @@
+interface:
+  display_name: "ELI30"
+  short_description: "Explain anything in a 30-second read"
+  default_prompt: "Explain this like I am 10 in a 30-second read."

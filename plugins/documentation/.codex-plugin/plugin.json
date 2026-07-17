@@ -1,0 +1,18 @@
+{
+  "name": "documentation",
+  "version": "0.1.0",
+  "description": "Documentation indexing, handoffs, and code-to-document consistency workflows.",
+  "author": {
+    "name": "hicknughes"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Documentation",
+    "shortDescription": "Maintain trustworthy project documentation",
+    "longDescription": "Creates and updates documentation indexes, writes cold-start handoffs, and audits documentation claims against the current codebase.",
+    "developerName": "hicknughes",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "defaultPrompt": "Help me maintain or audit this project's documentation."
+  }
+}

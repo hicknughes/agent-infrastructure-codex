@@ -1,0 +1,18 @@
+{
+  "name": "policy",
+  "version": "0.1.0",
+  "description": "Stable policy rules, contract-change checks, concept-drift audits, and compliance tracking.",
+  "author": {
+    "name": "hicknughes"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Policy",
+    "shortDescription": "Keep contracts and policies consistent",
+    "longDescription": "Defines durable policy rules, enumerates contract consumers, detects concept drift, and maintains compliance matrices.",
+    "developerName": "hicknughes",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "defaultPrompt": "Audit this change for policy, contract, and concept consistency."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "engineering-workflow",
+  "version": "0.1.0+codex.20260716202752",
+  "description": "Evidence-first engineering delivery with scalable investigation, planning, adversarial review, implementation, and verification workflows.",
+  "author": {
+    "name": "hicknughes"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Engineering Workflow",
+    "shortDescription": "Investigate, plan, challenge, build, and verify",
+    "longDescription": "Runs lightweight or full engineering workflows with execution-first investigation, modular subagent review, completeness checks, and evidence-based reporting.",
+    "developerName": "hicknughes",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": "Use the appropriate engineering delivery workflow for this task."
+  }
+}
