@@ -31,7 +31,7 @@ This skill remains the default owner of end-to-end coding delivery. Use installe
 - Use gstack's global `qa` skill for live web-application testing and fixes only when the user has approved its commit-producing workflow; use global `qa-only` for report-only testing.
 - Use gstack's global `ship` skill only on explicit user request because it can commit, push, and open a pull request.
 
-Keep the custom `review-implementation` check authoritative for incomplete wiring, duplicate responsibilities, missing consumers, and unnecessary abstraction. Keep custom documentation and policy skills authoritative for their repository artifacts.
+Keep the custom `review-implementation` check authoritative for request-to-evidence closure, incomplete wiring, duplicate responsibilities, missing consumers, and unnecessary abstraction. Keep custom documentation and policy skills authoritative for their repository artifacts.
 
 ## Lightweight path
 
@@ -39,9 +39,9 @@ Keep the custom `review-implementation` check authoritative for incomplete wirin
 2. State a brief plan and material assumptions. Validate assumptions that can change the approach.
 3. Implement narrowly. Search for existing responsibilities before adding new helpers or abstractions.
 4. Run targeted tests, then broader checks appropriate to the repository.
-5. Perform a distinct completeness review using `review-implementation`: wiring, consumers, duplicates, regressions, tests, and docs.
-6. Fix material findings and re-run affected verification.
-7. Report files changed, commands and outcomes, unresolved limitations, and why the work is complete.
+5. Perform a distinct request-to-evidence closure review using `review-implementation`: every user requirement, action trace, wiring, consumers, duplicates, regressions, tests, and docs.
+6. Require `VERDICT: PASS`. Fix material findings and re-run affected verification and closure review, with at most three review/fix cycles.
+7. If the gate still fails, report incomplete work rather than claiming completion. Otherwise report files changed, commands and outcomes, unresolved limitations, and why the work is complete.
 
 ## Full path
 
@@ -50,9 +50,9 @@ Keep the custom `review-implementation` check authoritative for incomplete wirin
 3. Use `red-team` to challenge the diagnosis and plan with independent subagents. Revise the plan from evidence.
 4. Implement the revised plan. Prefer a focused worker subagent for isolated implementation; keep architecture and integration decisions in the main task.
 5. Run targeted and repository-level verification.
-6. Use custom `engineering-workflow:review-implementation` with an independent reviewer after initial tests pass. Add gstack's global `review` for material or high-risk pre-landing review.
-7. Fix material findings, re-test targeted paths, then repeat broader verification.
-8. Report evidence, changes, review findings addressed, and anything not verified.
+6. Use custom `engineering-workflow:review-implementation` with an independent reviewer after initial tests pass. Require a request-to-evidence matrix and `VERDICT: PASS`. Add gstack's global `review` for material or high-risk pre-landing review.
+7. Fix material findings, re-test targeted paths, repeat broader verification, and rerun the closure gate, with at most three review/fix cycles.
+8. If the gate still fails, report incomplete work. Otherwise report evidence, changes, review findings addressed, and anything not verified.
 
 ## Gates
 
@@ -60,6 +60,7 @@ Keep the custom `review-implementation` check authoritative for incomplete wirin
 - Do not add a function, service, adapter, or configuration path before searching for an existing owner of that responsibility.
 - Do not call work complete when registration, consumers, migrations, tests, documentation, or configuration remain unwired.
 - Red-team output is input to the plan or implementation, not a raw debate to hand to the user.
+- Completion requires a `review-implementation` verdict of `PASS`; test success alone is insufficient.
 - If a required check cannot run, state exactly why and what remains uncertain.
 
 Read `references/workflow-gates.md` when deciding whether evidence is sufficient or a phase may close.

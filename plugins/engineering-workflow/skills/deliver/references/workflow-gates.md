@@ -24,6 +24,8 @@
 ## Completion Gate
 
 - Required tests and checks ran successfully, or limitations are explicit.
-- Independent implementation review found no unresolved material issue.
+- Every user requirement and approved plan item maps to current-state evidence.
+- The action trace identifies failed, skipped, deferred, and externally verified work.
+- Independent implementation review returns `VERDICT: PASS` with no unresolved material issue.
 - Documentation and operational steps match changed behavior.
 - The report distinguishes verified facts from remaining uncertainty.

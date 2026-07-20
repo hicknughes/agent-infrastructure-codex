@@ -1,0 +1,4 @@
+interface:
+  display_name: "Best of 3"
+  short_description: "Build three isolated candidates and apply the best"
+  default_prompt: "Run a Best-of-3 implementation tournament for this task."

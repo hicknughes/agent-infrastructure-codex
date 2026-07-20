@@ -1,6 +1,6 @@
 {
   "name": "engineering-workflow",
-  "version": "0.1.0+codex.20260716202752",
+  "version": "0.1.0+codex.20260720012959",
   "description": "Evidence-first engineering delivery with scalable investigation, planning, adversarial review, implementation, and verification workflows.",
   "author": {
     "name": "hicknughes"

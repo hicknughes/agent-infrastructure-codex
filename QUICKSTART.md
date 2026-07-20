@@ -26,7 +26,7 @@ Use the full engineering-workflow:deliver path to <request>. Investigate through
 
 - `investigate` — Use gstack's global skill for systematic root-cause debugging of runtime failures.
 - `engineering-workflow:red-team` — Challenge a diagnosis, plan, or implementation independently.
-- `engineering-workflow:review-implementation` — Find incomplete wiring, duplicate ownership, missed consumers, weak tests, and unnecessary complexity.
+- `engineering-workflow:review-implementation` — Close every request against current evidence, then check wiring, ownership, consumers, tests, and complexity.
 - `plan-eng-review` — Add a gstack architecture and test-plan review to a consequential full workflow.
 - `review` — Add gstack's material pre-landing structural review.
 - `qa-only` — Run report-only live web QA without source changes.
@@ -45,6 +45,16 @@ Type `$eli10`, `$eli15`, `$eli20`, or `$eli30` and select the matching `explain`
 - `eli30` — About 30 seconds; 72-90 words.
 
 Each version uses plain language suitable for a typical 10-year-old without sacrificing accuracy or sounding childish.
+
+## Best of 3
+
+Use `engineering-workflow:best-of-3` only when you explicitly want three independent implementations built in isolated Git worktrees and evaluated before one is applied.
+
+```text
+Use engineering-workflow:best-of-3 for this consequential task: <request>.
+```
+
+The source repository must be clean. The workflow is intentionally expensive, may return `NO WINNER`, preserves candidate worktrees for inspection, and never commits or pushes the main worktree unless separately requested.
 
 ## Repository setup
 

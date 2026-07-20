@@ -4,6 +4,8 @@
 
 Use the custom `deliver` skill for end-to-end coding work. It selects the lightweight or full workflow, preserves the selected quality gates, and reports completion evidence.
 
+Use custom `best-of-3` only on explicit request for consequential work where comparing three complete implementations justifies roughly triple implementation cost. It is not a default phase of `deliver`.
+
 ## Gstack Specialists
 
 - Global `office-hours` and `autoplan`: product discovery and broad planning before coding scope is settled.
@@ -16,7 +18,7 @@ Use the custom `deliver` skill for end-to-end coding work. It selects the lightw
 
 ## Custom Authorities
 
-- `review-implementation`: incomplete wiring, duplicate responsibilities, missing consumers, and unnecessary abstraction.
+- `review-implementation`: request-to-evidence closure, incomplete wiring, duplicate responsibilities, missing consumers, and unnecessary abstraction; completion requires `VERDICT: PASS`.
 - Documentation plugin: TOC, handoff, and documentation-consistency artifacts.
 - Policy plugin: stable policy IDs, contract-change checks, concept audits, and compliance matrices.
 

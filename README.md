@@ -4,12 +4,12 @@ Codex-native, modular engineering workflows derived selectively from the adjacen
 
 ## Plugins
 
-- **Engineering Workflow** — Lightweight and full delivery paths, execution-first investigation, adversarial plan review, implementation review, and planning logs.
+- **Engineering Workflow** — Lightweight and full delivery paths, execution-first investigation, adversarial plan review, request-to-evidence closure, optional Best-of-3 implementation tournaments, and planning logs.
 - **Documentation** — Documentation indexes, cold-start handoffs, and doc-to-code consistency audits.
 - **Policy** — Stable policy rules, contract consumer checks, concept-drift audits, and compliance matrices.
 - **Explain** — Plain-language ELI10 explanations sized for 10, 15, 20, or 30-second reads.
 
-Hooks, custom worktree coordination, automatic permission mutation, and Claude compatibility shims are intentionally excluded from the initial system.
+Hooks, general-purpose worktree orchestration, automatic permission mutation, and Claude compatibility shims remain excluded; Best-of-3 includes only its bounded tournament worktree helper.
 
 ## Gstack Coexistence
 
